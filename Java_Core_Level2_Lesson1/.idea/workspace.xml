@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c0a83e0-9566-4c7e-9451-e03aabe2ab5c" name="Default Changelist" comment="" />
+    <list default="true" id="0c0a83e0-9566-4c7e-9451-e03aabe2ab5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Circles/BackgroundColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circles/BackgroundColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Circles/MainCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circles/MainCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Circles/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circles/MainClass.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,11 +20,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YfcCqg3vPV8mV7x72VeX8bnssu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -58,48 +71,45 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="363" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583344377101" />
-    <state width="1876" height="319" key="GridCell.Tab.0.bottom" timestamp="1583353693577">
+    <state x="563" y="133" key="CommitChangelistDialog2" timestamp="1583430098351">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.0.center" timestamp="1583353693577">
+    <state x="563" y="133" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583430098351" />
+    <state width="1876" height="289" key="GridCell.Tab.0.bottom" timestamp="1583428667174">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.0.left" timestamp="1583353693577">
+    <state width="1876" height="289" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583428667174" />
+    <state width="1876" height="289" key="GridCell.Tab.0.center" timestamp="1583428667174">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.0.right" timestamp="1583353693577">
+    <state width="1876" height="289" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583428667174" />
+    <state width="1876" height="289" key="GridCell.Tab.0.left" timestamp="1583428667173">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.1.bottom" timestamp="1583353693577">
+    <state width="1876" height="289" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583428667173" />
+    <state width="1876" height="289" key="GridCell.Tab.0.right" timestamp="1583428667174">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.1.center" timestamp="1583353693577">
+    <state width="1876" height="289" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583428667174" />
+    <state width="1876" height="319" key="GridCell.Tab.1.bottom" timestamp="1583427185465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.1.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.1.left" timestamp="1583353693577">
+    <state width="1876" height="319" key="GridCell.Tab.1.bottom/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583427185465" />
+    <state width="1876" height="319" key="GridCell.Tab.1.center" timestamp="1583427185465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.1.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-    <state width="1876" height="319" key="GridCell.Tab.1.right" timestamp="1583353693577">
+    <state width="1876" height="319" key="GridCell.Tab.1.center/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583427185465" />
+    <state width="1876" height="319" key="GridCell.Tab.1.left" timestamp="1583427185465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="319" key="GridCell.Tab.1.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583353693577" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Circles/BackgroundColor.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1876" height="319" key="GridCell.Tab.1.left/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583427185465" />
+    <state width="1876" height="319" key="GridCell.Tab.1.right" timestamp="1583427185465">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="319" key="GridCell.Tab.1.right/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583427185465" />
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583430034645">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583430034645" />
   </component>
 </project>
