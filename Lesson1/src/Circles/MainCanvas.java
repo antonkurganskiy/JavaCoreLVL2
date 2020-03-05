@@ -12,15 +12,22 @@ public class MainCanvas extends JPanel {
     MainCanvas(MainClass controller) {                          //Constructor of our Canvas;
         lastFrameTime = System.nanoTime();
         this.controller = controller;
-        this.setBackground(backgroundColor.CanvasBackground(this,deltaTime));
+      //  this.setBackground(backgroundColor.CanvasBackground(this));
     }
+
+    /*public MainCanvas(MainClass controller) {
+        lastFrameTime = System.nanoTime();
+        this.controller = controller;
+        //  this.setBackground(backgroundColor.CanvasBackground(this));
+    }
+*/
     @Override
     protected void paintComponent(Graphics g) {                             // calling parent constructor from library;
         super.paintComponent(g);
 
         long currentTime = System.nanoTime();
          deltaTime = (currentTime - lastFrameTime) * 0.000000001f;
-        controller.onCanvasRepainted(this, g, deltaTime);
+        controller.onCanvasRepainted(this, g, deltaTime, backgroundColor);
         try {                                                              // Catching potential problems;
             Thread.sleep(16);                                       // setting delay to make life of CPU easier;
         } catch (InterruptedException e) {

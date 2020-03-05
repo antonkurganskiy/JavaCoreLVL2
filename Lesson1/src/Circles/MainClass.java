@@ -15,6 +15,8 @@ public class MainClass extends JFrame {
     private int NumberOfBalls = 10;                                     // Integer for changing number of balls on the canvas;
     private Sprite[] sprites = new Sprite[NumberOfBalls];               // Array for balls storage;
 
+    BackgroundColor backgroundColor = new BackgroundColor();
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {                     // as i understood from library - this method put run to the end of queue;
             @Override
@@ -65,7 +67,8 @@ public class MainClass extends JFrame {
 
 
 
-    public void onCanvasRepainted(MainCanvas canvas, Graphics g, float deltaTime) {     //Calling methods which will change the picture on the PC screen;
+    public void onCanvasRepainted(MainCanvas canvas, Graphics g, float deltaTime, BackgroundColor backgroundColor) {     //Calling methods which will change the picture on the PC screen;
+        backgroundColor.CanvasBackground(canvas, backgroundColor.getColorBack());
         update(canvas, deltaTime);
         render(canvas, g);
     }
