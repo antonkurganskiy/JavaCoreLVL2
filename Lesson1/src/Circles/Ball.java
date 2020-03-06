@@ -37,7 +37,6 @@ public class Ball extends Sprite {
         }
 
     }
-
     @Override
     public void render(MainCanvas canvas, Graphics g) {
         g.setColor(color);                                        // Setting color of our ball;
