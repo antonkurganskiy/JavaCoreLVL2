@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Lesson3 {
     public static ArrayList <String> wordsCountingList = new ArrayList<>();
-    public static HashMap<String, Integer> hm = new HashMap<>();
+    public static HashMap<Integer, String> hm = new HashMap<>();
 
     public static void main(String[] args) {
 
@@ -28,16 +28,16 @@ public class Lesson3 {
         }*/
         putArrayIntoArrayList(wordsArray);
         System.out.println(wordsCountingList);
-      //  System.out.println(Arrays.asList(hm));                                                    //??? Where he hide half of words???
-
-        CheckRepeat.checkRepeat(wordsCountingList);
+        System.out.println(Arrays.asList(hm));                                                    //??? Where he hide half of words???
+        CheckRepeat.checkRepeat(wordsCountingList, hm);
         System.out.println(wordsCountingList);
+
     }
 
     public static void putArrayIntoArrayList(String[] strings){
         for (int i = 0; i < strings.length; i++) {
             wordsCountingList.add(strings[i]);
-            hm.put(strings[i], i);
+            hm.put( i, strings[i]);
         }
     }
 
