@@ -1,10 +1,14 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Lesson3 {
+    public static ArrayList <String> wordsCountingList = new ArrayList<>();
+    public static HashMap<String, Integer> hm = new HashMap<>();
+
     public static void main(String[] args) {
-        HashMap<String, String> hm = new HashMap<>();
+
    /*     try {
         FileInputStream fis = new FileInputStream("FileForInputWords.txt");
         String string ;
@@ -18,15 +22,25 @@ public class Lesson3 {
             e.printStackTrace();
    */
     String[] wordsArray = {"distributed ","energy ","is ","as ","increased ","energy ","be ","distributed ","is ","transformer ","This ","allows ","energy ","the ","wire ","is ","as ","distributed ","formula ","the ","high ","through ","energy ","lines ","the ","voltage ","because ","as ","energy ",};
-    ArrayList<String> wordsCountingList = new ArrayList<>();
-    for (int i = 0; i < wordsArray.length; i++) {
+    //ArrayList<String> wordsCountingList = new ArrayList<>();
+   /* for (int i = 0; i < wordsArray.length; i++) {
                 wordsCountingList.add(wordsArray[i]);
-        }
-       // CheckRepeat checkRepeat = new CheckRepeat(wordsCountingList);
+        }*/
+        putArrayIntoArrayList(wordsArray);
+        System.out.println(wordsCountingList);
+      //  System.out.println(Arrays.asList(hm));                                                    //??? Where he hide half of words???
 
-    CheckRepeat.checkRepeat(wordsCountingList);
-    System.out.println(wordsCountingList);
+        CheckRepeat.checkRepeat(wordsCountingList);
+        System.out.println(wordsCountingList);
     }
+
+    public static void putArrayIntoArrayList(String[] strings){
+        for (int i = 0; i < strings.length; i++) {
+            wordsCountingList.add(strings[i]);
+            hm.put(strings[i], i);
+        }
+    }
+
     }
 
 
