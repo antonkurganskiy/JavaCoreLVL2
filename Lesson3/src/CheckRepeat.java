@@ -2,21 +2,42 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CheckRepeat {
-    private static  int bufferNumber =0;
-    public static  void checkRepeat(ArrayList<String> arrayList, HashMap<Integer, String> hm) {
+    private static int bufferNumber = 0;
+
+    public static void checkRepeat(ArrayList<String> arrayList, HashMap<Integer, String> hm) {
         String bufferWord;
 
+        /**Test code block
+         *
+         * This method will check how many times we meet this word;
+         *
+         * method works, but with annoying mistake;
+         */
+
         System.out.println(hm.size());
-        for (int i =0; i < hm.size(); i++){
+        for (int i = 0; i < hm.size(); i++) {
             bufferWord = hm.get(i);
-            for(int j = 0; j < hm.size(); j++)
-            if (hm.get(j) == bufferWord){
-          //  if (hm.entrySet().contains(bufferWord)){                                  //!!!Doesn't work;
-                bufferNumber ++;
-            }
-            System.out.println("Word " + bufferWord + " repeats " + bufferNumber + " times.");
-            bufferNumber=0;
+            for (int j = 0; j < hm.size(); j++)
+                if (hm.get(j) == bufferWord) {
+                    //  if (hm.entrySet().contains(bufferWord)){                                  //!!!Doesn't work;
+                    bufferNumber++;
+                }
+            System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
+            bufferNumber = 0;
+
+            // That code block didn't stopped annoying repeating;
+      /*      if (bufferNumber == 1) {
+                System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
+                bufferNumber = 0;
+            } else// (int) hm.keySet().toArray()[i] == bufferNumber)
+            {
+                System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
+                bufferNumber = 0;
+          */
         }
+
+
+
 
         /** Test code block
          * Here will be trying to create code which prints only unique words;
