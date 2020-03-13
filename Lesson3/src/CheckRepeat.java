@@ -4,28 +4,34 @@ import java.util.HashMap;
 public class CheckRepeat {
     private static int bufferNumber = 0;
 
-    public static void checkRepeat(ArrayList<String> arrayList, HashMap<Integer, String> hm) {
+    public static void checkRepeat(ArrayList<String> arrayList, HashMap<Integer, String> hm, String[] wordsArray) {
         String bufferWord;
 
         /**Test code block
          *
          * This method will check how many times we meet this word;
          *
-         * method works, but with annoying mistake;
+         * 12.03.20 method works, but with annoying mistake;
+         * 13.03.20 Deleted all repeating words before sending them to Sout and then restore hm for next method;
          */
-
-        System.out.println(hm.size());
+     //   System.out.println(hm.size());                                //Test row;
         for (int i = 0; i < hm.size(); i++) {
-            bufferWord = hm.get(i);
-            for (int j = 0; j < hm.size(); j++)
-                if (hm.get(j) == bufferWord) {
-                    //  if (hm.entrySet().contains(bufferWord)){                                  //!!!Doesn't work;
-                    bufferNumber++;
-                }
-            System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
-            bufferNumber = 0;
-
-            // That code block didn't stopped annoying repeating;
+            if (hm.get(i) != null) {
+                bufferWord = hm.get(i);
+                for (int j = 0; j < hm.size(); j++)
+                    if (hm.get(j) == bufferWord && hm.get(j) != null) {
+                        //  if (hm.entrySet().contains(bufferWord)){                                  //!!!Doesn't work;
+                        bufferNumber++;
+                        if (hm.get(j) == null) {
+                            hm.remove(j);
+                        }
+                        hm.remove(j);
+                    }
+                System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //13.03.20 - delete all repeating words to avoid sending them to sout;//???12.03.20 how exile repeating word from this sout?;
+                bufferNumber = 0;
+            }
+        }
+            //12.03.20 That code block didn't stopped annoying repeating;
       /*      if (bufferNumber == 1) {
                 System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
                 bufferNumber = 0;
@@ -34,11 +40,7 @@ public class CheckRepeat {
                 System.out.println("Word ''" + bufferWord + "'' repeats " + bufferNumber + " times.");  //??? how exile repeating word from this sout?;
                 bufferNumber = 0;
           */
-        }
-
-
-
-
+        Lesson3.putArrayIntoArrayList(wordsArray); // restoring our HashMap after deleting repeats;
         /** Test code block
          * Here will be trying to create code which prints only unique words;
          *
@@ -55,7 +57,7 @@ public class CheckRepeat {
                 }
         }
     } */
-
+        System.out.println("Our HashMap without repeating : ");
         /**Test code block
          * Here will be trying to create code which remove repeating words;
          *
@@ -69,7 +71,5 @@ public class CheckRepeat {
                 }
             }
         }
-
-
     }
 }

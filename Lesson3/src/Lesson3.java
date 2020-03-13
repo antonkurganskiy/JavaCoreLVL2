@@ -9,6 +9,11 @@ public class Lesson3 {
 
     public static void main(String[] args) {
 
+
+        /**Test code block;
+         *
+         * 12.03.20 Trying to apply this method for file reader;
+         * */
    /*     try {
         FileInputStream fis = new FileInputStream("FileForInputWords.txt");
         String string ;
@@ -27,11 +32,16 @@ public class Lesson3 {
                 wordsCountingList.add(wordsArray[i]);
         }*/
         putArrayIntoArrayList(wordsArray);
+        System.out.println("Our initial array of words ");
         System.out.println(wordsCountingList);
-        System.out.println(Arrays.asList(hm));                                                    //??? Where he hide half of words???
-        CheckRepeat.checkRepeat(wordsCountingList, hm);
+        System.out.println("After adding it into HashMap we have this keys and values ");
+        System.out.println(Arrays.asList(hm));                                                    //??? 12.03.20 Where he hide half of words???
+        System.out.println("Function which counts quantity of repeating and deleting it in work looks like that : ");
+        CheckRepeat.checkRepeat(wordsCountingList, hm, wordsArray);
         System.out.println(wordsCountingList);
-
+        PhoneBook.phoneBook();
+     //   System.out.println(PhoneBook.getBook());
+        PhoneBook.searchByNumber(hm);
     }
 
     public static void putArrayIntoArrayList(String[] strings){
