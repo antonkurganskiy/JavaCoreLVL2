@@ -61,7 +61,6 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         panelTop.add(btnLogin);
         panelBottom.add(btnDisconnect, BorderLayout.WEST);
         panelBottom.add(tfMessage, BorderLayout.CENTER);
-
         ActionListener actionListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -124,6 +123,7 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
                 }
             };
         btnSend.addActionListener(actionListener);
+        btnSend.getRootPane().addKeyListener(keyListener); // Why? why it isn't working???;
      //   btnSend.addKeyListener(keyListener);       //this was stupid, I guess;
         panelBottom.add(btnSend, BorderLayout.EAST);
      //   panelBottom.getRootPane().setDefaultButton(btnSend);      // where Frame which will listen keyboard?;
