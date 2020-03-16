@@ -6,10 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.File;
+import java.io.*;
+import java.util.Date;
 
 public class ClientGUI extends JFrame implements ActionListener, Thread.UncaughtExceptionHandler {
 
@@ -38,6 +36,8 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
             }
         });
     }
+    private static final String filename = "file.txt";
+   private static final File file = new File("C:\\Learning IT\\Java\\JavaLvl2\\Lesson4\\src\\ru\\gb\\jtwo\\ld\\online\\client\\file.txt");
 
     private ClientGUI() {
         Thread.setDefaultUncaughtExceptionHandler(this);
@@ -68,9 +68,24 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
                 String buffer;
                 int i = 0;
                 buffer = tfMessage.getText();
-                log.insert(buffer + "\n", i);
+                log.insert(new Date(new Date().getTime()) + " : " + tfLogin.getText() + " write : "+ buffer + "\n", i);
+                try {
+ /*                   PrintWriter printWriter = new PrintWriter("file.txt");
+                    printWriter.println(buffer);
+                    printWriter.flush();
+                    printWriter.close();*/
+                        BufferedWriter fis = new BufferedWriter(new FileWriter(file, true));
+                        fis.write(new Date(new Date().getTime())  + " : " + tfLogin.getText() + " write : "+ buffer + "\n");
+                        fis.flush();
+                        fis.close();
+                }catch (FileNotFoundException ex){
+                    ex.printStackTrace();
+                }catch (IOException ex){
+                    ex.printStackTrace();
+                }
                 i++;
                 tfMessage.removeAll(); // ?? why doesn't erase nothing?;
+
             //    buffer = "";
             }
         } ;
@@ -79,19 +94,27 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
             public void keyTyped(KeyEvent e) { }
             @Override
             public void keyPressed(KeyEvent e) {
+
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     String buffer;
                     int i = 0;
                     buffer = tfMessage.getText();
-                    log.insert(buffer + "\n", i);
-
-                    i++;
+                    log.insert( new Date(new Date().getTime())  + " : " + tfLogin.getText() + " write : "+ buffer + "\n", i);
                     try {
-                        BufferedWriter fis = new BufferedWriter(new File("file.txt"),true);
+                        PrintWriter printWriter = new PrintWriter("file.txt");
+                        printWriter.println(new Date(new Date().getTime())  + " : " + tfLogin.getText() + " write : " + buffer + "\n");
+                        printWriter.flush();
+                        printWriter.close();
+                     /*   BufferedWriter fis = new BufferedWriter(new FileWriter(new File(filename), true));
+                        fis.write(buffer);
+                        fis.flush();
+                        fis.close();*/
                     }catch (FileNotFoundException ex){
                         ex.printStackTrace();
+                    }catch (IOException ex){
+                        ex.printStackTrace();
                     }
-
+                    i++;
                     tfMessage.removeAll(); // ?? why doesn't erase nothing?;
                 }
             }
@@ -100,17 +123,14 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
 
                 }
             };
-
         btnSend.addActionListener(actionListener);
-
      //   btnSend.addKeyListener(keyListener);       //this was stupid, I guess;
         panelBottom.add(btnSend, BorderLayout.EAST);
-     //   panelBottom.getRootPane().setDefaultButton(btnSend);
+     //   panelBottom.getRootPane().setDefaultButton(btnSend);      // where Frame which will listen keyboard?;
         add(scrollLog, BorderLayout.CENTER);
         add(scrollUsers, BorderLayout.EAST);
         add(panelTop, BorderLayout.NORTH);
         add(panelBottom, BorderLayout.SOUTH);
-
         setVisible(true);
     }
 
@@ -123,9 +143,6 @@ public class ClientGUI extends JFrame implements ActionListener, Thread.Uncaught
         else
             throw new RuntimeException("Unknown source: " + src);
     }
-
-
-
 
     @Override
     public void uncaughtException(Thread t, Throwable e) {
